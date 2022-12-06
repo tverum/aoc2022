@@ -31,7 +31,6 @@ def parse_stacks(text: str):
 
 
 def parse_instructions(text: str):
-    instructions = []
     instructions = re.findall(PATTERN_2, text)
     instructions = list(map(lambda x: (int(x[0]), int(x[1]), int(x[2])), instructions))
     return instructions
